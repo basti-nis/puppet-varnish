@@ -7,9 +7,8 @@ define varnish::vcl (
   $content,
   $file = $name
 ) {
-
-  include ::varnish
-  include ::varnish::params
+  include varnish
+  include varnish::params
 
   file { $file:
     content => $content,
